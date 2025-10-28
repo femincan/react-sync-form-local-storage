@@ -19,13 +19,11 @@ The form in [src/App.tsx](src/App.tsx) uses:
 
 Form data is automatically saved to localStorage whenever any field changes, and restored when the page reloads. The form uses uncontrolled components (via `register`) to avoid unnecessary re-renders on every keystroke, improving performance.
 
-## Installation
+## Installation & Usage
 
 ```bash
 pnpm install
 ```
-
-## Usage
 
 ```bash
 # Development
