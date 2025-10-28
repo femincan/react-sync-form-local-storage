@@ -9,6 +9,16 @@ A simple React application demonstrating form state synchronization with localSt
 - Uncontrolled form components to avoid re-renders on every field change
 - Built with React, TypeScript, and react-hook-form
 
+## How It Works
+
+The form in [src/App.tsx](src/App.tsx) uses:
+
+- `react-hook-form` for form management with uncontrolled components
+- `localStorage` to persist form data
+- React's `useEffect` to restore saved data on mount
+
+Form data is automatically saved to localStorage whenever any field changes, and restored when the page reloads. The form uses uncontrolled components (via `register`) to avoid unnecessary re-renders on every keystroke, improving performance.
+
 ## Installation
 
 ```bash
@@ -30,16 +40,6 @@ pnpm preview
 # Lint
 pnpm lint
 ```
-
-## How It Works
-
-The form in [src/App.tsx](src/App.tsx) uses:
-
-- `react-hook-form` for form management with uncontrolled components
-- `localStorage` to persist form data
-- React's `useEffect` to restore saved data on mount
-
-Form data is automatically saved to localStorage whenever any field changes, and restored when the page reloads. The form uses uncontrolled components (via `register`) to avoid unnecessary re-renders on every keystroke, improving performance.
 
 ## License
 
